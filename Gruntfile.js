@@ -49,23 +49,6 @@ module.exports = function(grunt) {
         'config/*.js',
         'config/data/*.js'
       ]}
-    },
-
-    env : {
-      options: {
-        // Shared Options Hash
-      },
-      staging: {
-        NODE_ENV: 'stage2'
-      },
-      staging_proxy: {
-        NODE_ENV: 'stage2',
-        NODE_CONFIG : '{"proxy":"http://127.0.0.1:8888"}'
-      },
-      staging_sdc_proxy : {
-        NODE_ENV: 'stage2',
-        NODE_CONFIG: '{"proxy":"http://ndc-drurl.walmart.com:8080"}'
-      }
     }
 
   });
