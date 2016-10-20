@@ -10,6 +10,8 @@ This tool helps you to quickly bypass all the hack and all you need to
 do is to go to your Sauce Labs dashboard and wait for the full control
 over the simulator/emulator.
 
+Even more, this tool creates Sauce Connect tunnel automatically for you, so your mobile application is able to access internal network assets from remote Sauce Labs VMs.
+
 ## Setup
 
 * Install [Node.js >= v4.2.3 and npm](http://nodejs.org/)
