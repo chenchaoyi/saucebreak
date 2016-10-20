@@ -1,0 +1,9 @@
+#!/bin/bash
+
+testrail_run_id=${testrail_run_id:-8979}
+
+TESTRAIL_RUN_ID=$testrail_run_id SAUCE=true UPLOADAPP=true \
+  NODE_CONFIG='{"remoteAppName": "walmart_app.zip", "capabilities": {"app": "app/Walmart.app"}}'\
+  ./node_modules/.bin/magellan --max_workers=300  --max_test_attempts=2 \
+  --sauce --browsers=iphone_9_3_iOS_iPhone_Simulator
+

@@ -1,0 +1,13 @@
+{
+  "testServer": "http://localhost:4723/wd/hub",
+  "remoteAppName": "test_app.zip",
+  "capabilities": {
+    "appiumVersion": "1.5.3",
+    "platformName": "iOS",
+    "platformVersion": "9.3",
+    "deviceName": "iPhone 6",
+    "sendKeyStrategy": "setValue",
+    "waitForAppScript": "true",
+    "app": "./app/test.app"
+  }
+}

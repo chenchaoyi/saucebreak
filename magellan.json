@@ -1,0 +1,10 @@
+{
+  "mocha_tests": ["./test/script/"],
+  "mocha_opts": "test/mocha.opts",
+  "framework": "testarmada-magellan-mocha-plugin",
+  "create_tunnels": true,
+  "sauce": true,
+  "serial": true,
+  "max_test_attempts": 1,
+  "setup_teardown": "./common/magellan_setup.js"
+}
