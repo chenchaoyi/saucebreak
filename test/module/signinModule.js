@@ -5,17 +5,8 @@ module.exports = {
   locators: {
     xpath: {
       //xpath locators
-      email: '//UIATextField[@value="Email"]',
-      password: '//UIASecureTextField[@value="Password"]',
-      user_name: '//UIANavigationBar[@name="Shop"]/UIAStaticText[2]',
-      error_popup: '//UIAAlert[1]/UIAScrollView[1]/UIAStaticText[2]',
       alert: '//UIAAlert',
-      shop_tab_bar_item: '//UIATabBar[1]/UIAButton[1][@name="Shop"]',
       shop_tab_bar_item_selected: '//UIATabBar[1]/UIAButton[1][@name="Shop" and @value="1"]',
-      shop_button: '//UIANavigationBar[1]/UIAButton[@name="Shop"]',
-      navbar_signin: '//UIANavigationBar[@name = "Sign In"]',
-      map_annotation: '//UIAMapView[1]/UIAPopover',
-      signin_button: '//UIAButton[@name="Sign In"]',
       dismiss_button_login_modal: '//UIAButton[@name="closeModal"]'
     },
     acc_id: {
@@ -33,12 +24,6 @@ module.exports = {
       skip: 'SKIP',
       done: 'DONE'
     }
-  },
-
-  waitForChristmasTreeAnimation: function(driver) {
-    var waitTimeForChristmasTreeAnimation = 5000;
-    return driver
-      .sleep(waitTimeForChristmasTreeAnimation);
   },
 
   allowAccess: function(driver, loc) {
@@ -167,15 +152,6 @@ module.exports = {
             .clickEl(loc.acc_id.allow);
         }
       })
-  },
-
-  retryLogin: function(driver, loc, password) {
-    var waitTimeForNetworkOutage = 5000;
-    return driver
-      .sleep(waitTimeForNetworkOutage)
-      .typeEl(password, loc.xpath.password, 'xpath')
-      .keys(wd.SPECIAL_KEYS.Return)
-      .checkForLoginFailure(true)
   }
 
 };

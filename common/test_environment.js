@@ -2,8 +2,8 @@ var Config = require('config');
 var Moment = require('moment');
 var SauceLabs = require('saucelabs');
 
-// var AppiumDriver = require('kunlun').AppiumDriver;
-var AppiumDriver = require('./common');
+var AppiumDriver = require('kunlun').AppiumDriver;
+//var AppiumDriver = require('./common');
 
 var sauce_username = process.env.SAUCE_USERNAME;
 var sauce_password = process.env.SAUCE_ACCESS_KEY;
@@ -89,7 +89,5 @@ afterEach(function() {
 });
 
 module.exports = {
-  capabilities: Config.capabilities,
-  testServer: Config.testServer,
   appiumDriver: appiumDriver
 };

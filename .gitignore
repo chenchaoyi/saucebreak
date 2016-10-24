@@ -6,6 +6,7 @@ lib-cov
 *.out
 *.pid
 .DS_Store
+temp
 
 pids
 logs
