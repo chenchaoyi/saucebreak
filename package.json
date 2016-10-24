@@ -1,7 +1,7 @@
 {
   "name": "SauceBreak",
-  "version": "0.0.1",
-  "description": "iOS app Appium session break point tool",
+  "version": "0.0.2",
+  "description": "Sauce Labs Appium session break point tool",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,7 +12,8 @@
   },
   "keywords": [
     "appium",
-    "ios"
+    "ios",
+    "android"
   ],
   "devDependencies": {
     "chai": "^3.5.0",
@@ -29,7 +30,6 @@
   "dependencies": {
     "grunt-cli": "^1.2.0",
     "moment": "^2.15.1",
-    "request": "^2.72.0",
     "saucelabs": "^1.2.0",
     "testarmada-magellan": "^8.8.4",
     "testarmada-magellan-mocha-plugin": "https://github.com/chenchaoyi/magellan-mocha-plugin/tarball/master"

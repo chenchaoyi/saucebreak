@@ -13,7 +13,7 @@ SetupTeardown.prototype = {
   initialize: function () {
     var deferred = Q.defer();
 
-    if (process.env.SAUCE !== 'true' || process.env.UPLOADAPP !== 'true') {
+    if (process.env.UPLOADAPP !== 'true') {
       deferred.resolve();
       return deferred.promise;
     } else {
