@@ -1,4 +1,4 @@
-# iOS App Appium Sauce Labs break point tool
+# Sauce Labs manual testing tool for Mobile Application
 
 Do you know Sauce Labs has a `hidden` feature that allows you to have
 full control over simulator/emulator and do
@@ -6,11 +6,13 @@ manual mobile appliation testing?
 
 However, to do this, it requires quite a hack.
 
-This tool helps you to quickly bypass all the hack and all you need to
-do is to go to your Sauce Labs dashboard and wait for the full control
-over the simulator/emulator.
+This tool helps you:
+- Automatically upload your application to Sauce Labs storage
+- Quickly bypass all the hack that are needed for the setup
+- Automatically setup Sauce Connect tunnel between your local machine and Sauce Labs VM so the mobile app tested has all the internal resources access
 
-Even more, this tool creates Sauce Connect tunnel automatically for you, so your mobile application is able to access internal network assets from remote Sauce Labs VMs.
+All you need to do is to start the tool, then go to your Sauce Labs dashboard and wait for the full control
+over the simulator/emulator.
 
 ## Setup
 
@@ -21,9 +23,7 @@ $ git clone git@github.com:chenchaoyi/saucebreak.git
 $ npm install
 ```
 
-## Run tests
-
-#### run tests:
+## Usage
 
 ```bash
 # Set your Sauce Labs credential in environment variable
