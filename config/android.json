@@ -1,0 +1,12 @@
+{
+  "testServer": "http://localhost:4723/wd/hub",
+  "remoteAppName": "qa-debug.apk",
+  "capabilities": {
+    "appiumVersion": "1.5.3",
+    "waitForAppScript": "true",
+    "platformName": "Android",
+    "deviceName": "Android Emulator",
+    "platformVersion": "5.1",
+    "app": "./app/qa-debug.apk"
+  }
+}
