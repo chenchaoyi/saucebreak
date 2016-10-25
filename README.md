@@ -30,8 +30,12 @@ $ npm install
 export SAUCE_USERNAME=your_user_name
 export SAUCE_ACCESS_KEY=your_access_key
 
-# Start command line:
+# Start command line
+# for iOS:
 UPLOADAPP=true NODE_CONFIG='{"capabilities": {"app": "path_to_your_app"}}' ./node_modules/.bin/magellan --browsers=iphone_9_3_iOS_iPhone_Simulator
+
+# for Android:
+NODE_ENV=android UPLOADAPP=true NODE_CONFIG='{"capabilities": {"app": "path_to_your_app"}}' ./node_modules/.bin/magellan --browsers=android_5_1_Linux_Android_Emulator
 
 ```
 
