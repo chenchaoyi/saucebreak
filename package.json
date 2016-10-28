@@ -1,6 +1,7 @@
 {
   "name": "SauceBreak",
   "version": "0.0.2",
+  "author": "Chaoyi Chen <ccy.chenchaoyi@gmail.com>",
   "description": "Sauce Labs Appium session break point tool",
   "main": "index.js",
   "scripts": {
@@ -10,16 +11,15 @@
     "type": "git",
     "url": "https://github.com/chenchaoyi/saucebreak"
   },
+  "license": "MIT",
   "keywords": [
     "appium",
+    "testing",
+    "saucelabs",
     "ios",
     "android"
   ],
   "devDependencies": {
-    "chai": "^3.5.0",
-    "chai-as-promised": "^5.3.0",
-    "colors": "^1.0.3",
-    "wd": "^1.0.0",
     "mocha": "3.1.2",
     "config": "^1.20.4",
     "q": "^1.1.2",
@@ -30,7 +30,7 @@
   "dependencies": {
     "grunt-cli": "^1.2.0",
     "kunlun": "^0.2.8",
-    "moment": "^2.15.1",
+    "moment": "^2.15.2",
     "saucelabs": "^1.2.0",
     "testarmada-magellan": "^8.8.4",
     "testarmada-magellan-mocha-plugin": "https://github.com/chenchaoyi/magellan-mocha-plugin/tarball/master"

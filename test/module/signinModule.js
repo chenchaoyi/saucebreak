@@ -1,5 +1,3 @@
-var assert = require('chai').assert;
-var wd = require("wd");
 
 module.exports = {
   locators: {
