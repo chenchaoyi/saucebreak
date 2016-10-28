@@ -25,6 +25,11 @@ if (process.env.SAUCE_CONNECT_TUNNEL_ID !== null) {
   Config.capabilities.tunnelIdentifier = process.env.SAUCE_CONNECT_TUNNEL_ID;
 }
 
+// configure Sauce parent tunnel
+if (process.env.SAUCE_CONNECT_PARENT_TUNNEL_ID !== null) {
+  Config.capabilities.parentTunnel = process.env.SAUCE_CONNECT_PARENT_TUNNEL_ID;
+}
+
 appiumDriver = new AppiumDriver(Config.testServer);
 
 // Root beforeEach and afterEach to handle SauceLabs dashboard status

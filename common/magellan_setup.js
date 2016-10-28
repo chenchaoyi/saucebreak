@@ -28,9 +28,9 @@ SetupTeardown.prototype = {
         }
       })
       var app_path;
-      if (Path.isAbsolute(config_source.appPath)) {
-        app_path = config_source.appPath;
-      } else if (config_source.name === '$NODE_CONFIG') {
+      if (process.env.APP_PATH) {
+        app_path = process.env.APP_PATH;
+      } else if (Path.isAbsolute(config_source.appPath)) {
         app_path = config_source.appPath;
       } else {
         app_path = Path.relative('../..', config_source.appPath)
@@ -40,7 +40,7 @@ SetupTeardown.prototype = {
       // Compress app if it is an iOS app file, for ipa/apk app file, don't compress
       var localZipFilePath = app_path;
       if(Path.extname(app_path) === '.app'){
-        console.log('\nStart app compression...');
+        console.log('\nStart app compression for ' + app_path + '...');
         var localZipFilePath = Path.join(Path.dirname(app_path), Config.remoteAppName);
         Exec('zip -r ' + localZipFilePath + ' ' + app_path);
         console.log('Compression successful')
