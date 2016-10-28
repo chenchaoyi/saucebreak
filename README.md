@@ -1,4 +1,4 @@
-# Sauce Labs manual testing tool for Mobile Application
+# Tool for manual controlling Mobile Application on Sauce Labs
 
 Do you know Sauce Labs has a **hidden** feature that allows you to have
 full control over simulator/emulator and do
