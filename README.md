@@ -37,10 +37,10 @@ e.g.: If you only need to manually test the mobile application without Sauce Con
 ```bash
 # Start command line
 # for iOS:
-UPLOADAPP=true NODE_CONFIG='{"capabilities": {"app": "path_to_your_app"}}' ./node_modules/.bin/magellan --browsers=iphone_9_3_iOS_iPhone_Simulator
+UPLOADAPP=true APP_PATH=path_to_your_app ./node_modules/.bin/magellan --browsers=iphone_9_3_iOS_iPhone_Simulator
 
 # for Android:
-NODE_ENV=android UPLOADAPP=true NODE_CONFIG='{"capabilities": {"app": "path_to_your_app"}}' ./node_modules/.bin/magellan --browsers=android_5_1_Linux_Android_Emulator
+NODE_ENV=android UPLOADAPP=true APP_PATH=path_to_your_app ./node_modules/.bin/magellan --browsers=android_5_1_Linux_Android_Emulator
 ```
 
 ### Mobile application manual control with newly created network tunnel
@@ -48,10 +48,10 @@ e.g.: If you are inside internal network (in the office or have access through V
 ```bash
 # Start command line
 # for iOS:
-UPLOADAPP=true NODE_CONFIG='{"capabilities": {"app": "path_to_your_app"}}' ./node_modules/.bin/magellan --browsers=iphone_9_3_iOS_iPhone_Simulator --create_tunnels
+UPLOADAPP=true APP_PATH=path_to_your_app ./node_modules/.bin/magellan --browsers=iphone_9_3_iOS_iPhone_Simulator --create_tunnels
 
 # for Android:
-NODE_ENV=android UPLOADAPP=true NODE_CONFIG='{"capabilities": {"app": "path_to_your_app"}}' ./node_modules/.bin/magellan --browsers=android_5_1_Linux_Android_Emulator --create_tunnels
+NODE_ENV=android UPLOADAPP=true APP_PATH=path_to_your_app ./node_modules/.bin/magellan --browsers=android_5_1_Linux_Android_Emulator --create_tunnels
 ```
 
 ### Mobile application manual control with existed network tunnel
@@ -59,10 +59,10 @@ e.g.: If someone inside the internal network has setup a Sauce Connect tunnel an
 ```bash
 # Start command line
 # for iOS:
-UPLOADAPP=true NODE_CONFIG='{"capabilities": {"app": "path_to_your_app"}}' ./node_modules/.bin/magellan --browsers=iphone_9_3_iOS_iPhone_Simulator --sauce_tunnel_id=shared_tunnel_id
+UPLOADAPP=true APP_PATH=path_to_your_app ./node_modules/.bin/magellan --browsers=iphone_9_3_iOS_iPhone_Simulator --sauce_tunnel_id=shared_tunnel_id
 
 # for Android:
-NODE_ENV=android UPLOADAPP=true NODE_CONFIG='{"capabilities": {"app": "path_to_your_app"}}' ./node_modules/.bin/magellan --browsers=android_5_1_Linux_Android_Emulator --sauce_tunnel_id=shared_tunnel_id
+NODE_ENV=android UPLOADAPP=true APP_PATH=path_to_your_app ./node_modules/.bin/magellan --browsers=android_5_1_Linux_Android_Emulator --sauce_tunnel_id=shared_tunnel_id
 ```
 
 ### Mobile application manual control with existed network tunnel shared from Sauce Labs parent account
@@ -70,8 +70,8 @@ For an complete example of this, please refer to this wiki page.
 ```bash
 # Start command line
 # for iOS:
-UPLOADAPP=true NODE_CONFIG='{"capabilities": {"app": "path_to_your_app"}}' SAUCE_CONNECT_PARENT_TUNNEL_ID=parent_sauce_labs_username ./node_modules/.bin/magellan --browsers=iphone_9_3_iOS_iPhone_Simulator --sauce_tunnel_id=shared_tunnel_id
+UPLOADAPP=true APP_PATH=path_to_your_app SAUCE_CONNECT_PARENT_TUNNEL_ID=parent_sauce_labs_username ./node_modules/.bin/magellan --browsers=iphone_9_3_iOS_iPhone_Simulator --sauce_tunnel_id=shared_tunnel_id
 
 # for Android:
-NODE_ENV=android UPLOADAPP=true NODE_CONFIG='{"capabilities": {"app": "path_to_your_app"}}' SAUCE_CONNECT_PARENT_TUNNEL_ID=parent_sauce_labs_username ./node_modules/.bin/magellan --browsers=android_5_1_Linux_Android_Emulator --sauce_tunnel_id=shared_tunnel_id
+NODE_ENV=android UPLOADAPP=true APP_PATH=path_to_your_app SAUCE_CONNECT_PARENT_TUNNEL_ID=parent_sauce_labs_username ./node_modules/.bin/magellan --browsers=android_5_1_Linux_Android_Emulator --sauce_tunnel_id=shared_tunnel_id
 ```
