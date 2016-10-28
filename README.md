@@ -66,7 +66,7 @@ NODE_ENV=android UPLOADAPP=true APP_PATH=path_to_your_app ./node_modules/.bin/ma
 ```
 
 ### Mobile application manual control with existed network tunnel shared from Sauce Labs parent account
-For an complete example of this, please refer to this wiki page.
+For an complete example of this, please refer to ［this wiki page］（https://github.com/chenchaoyi/saucebreak/wiki/How-to-set-up-Sauce-Connect-and-share-it-with-others）.
 ```bash
 # Start command line
 # for iOS:
