@@ -33,6 +33,7 @@
     "moment": "^2.15.2",
     "saucelabs": "^1.2.0",
     "testarmada-magellan": "^8.8.4",
-    "testarmada-magellan-mocha-plugin": "https://github.com/chenchaoyi/magellan-mocha-plugin/tarball/master"
+    "testarmada-magellan-mocha-plugin": "https://github.com/chenchaoyi/magellan-mocha-plugin/tarball/master",
+    "valid-url": "^1.0.9"
   }
 }

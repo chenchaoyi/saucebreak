@@ -1,6 +1,7 @@
 var Config = require('config');
 var Moment = require('moment');
 var SauceLabs = require('saucelabs');
+var ValidUrl = require('valid-url');
 
 var AppiumDriver = require('kunlun').AppiumDriver;
 //var AppiumDriver = require('./common');
@@ -18,7 +19,11 @@ var appiumDriver;
 
 // Update SauceLabs settings
 Config.testServer = 'http://' + sauce_username + ':' + sauce_password + '@ondemand.saucelabs.com:80/wd/hub';
-Config.capabilities.app = 'sauce-storage:' + Config.remoteAppName;
+if (ValidUrl.isUri(Config.remoteAppName)) {
+  Config.capabilities.app = Config.remoteAppName;
+} else {
+  Config.capabilities.app = 'sauce-storage:' + Config.remoteAppName;
+}
 
 // configure Sauce tunnel if present from Magellan
 if (process.env.SAUCE_CONNECT_TUNNEL_ID !== null) {
