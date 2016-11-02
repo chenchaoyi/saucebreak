@@ -26,7 +26,7 @@ if (ValidUrl.isUri(Config.remoteAppName)) {
 }
 
 // configure Sauce tunnel if present from Magellan
-if (process.env.SAUCE_CONNECT_TUNNEL_ID !== null) {
+if (process.env.SAUCE_CONNECT_TUNNEL_ID !== undefined) {
   Config.capabilities.tunnelIdentifier = process.env.SAUCE_CONNECT_TUNNEL_ID;
 }
 
